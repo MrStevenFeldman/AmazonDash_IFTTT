@@ -1,0 +1,34 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          dash_ifft_script
+# Required-Start:    networking
+# Required-Stop:     networking
+# X-Interactive:     false
+# Description:       Start/stop Dash 443 listener
+### END INIT INFO
+
+DESC="launch dash script"
+NAME=dash_service
+#DAEMON=
+
+do_start()
+{
+   echo "starting dash!";
+   .//bin/dash_listener.sh &
+}
+
+do_stop()
+{
+   echo "not implemented!"
+}
+
+case "$1" in
+   start)
+     do_start
+     ;;
+   stop)
+     do_stop
+     ;;
+esac
+
+exit 0
