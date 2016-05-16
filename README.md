@@ -1,6 +1,7 @@
 # AmazonDash_IFTTT
 
-Notes: this is a naive port listenr
+TODO: This can be improved by executing specific code based on the IP addresss of the connecting device.
+Notes: Is there a better way to achieve this on a router?
 
 # Setup Instructions
 
@@ -13,6 +14,7 @@ Follow the instructions from the Amazon app, but don't assign a product to the d
 
 ## Router Configuration (openwrt)
 
+### Through the web ui:
 1. Give the dash a static ip address
 2. Configure Traffic Rules (Network -> Firewall -> Traffic Rules)
 
@@ -33,18 +35,18 @@ Follow the instructions from the Amazon app, but don't assign a product to the d
       From any host in any zone with source MAC <DASH MAC> To any host in wan
     	Refuse Forward
     ```
-
-2. Configure scripts
+### Through the terminal
+1. Configure scripts
     In dash_listner.sh replace the url with the url from your recipe
 
-3. Install scripts
+2. Install scripts to the router
   ```
     cp dash_listener.sh /bin/
     cp dash_service /etc/init.d/
     reload your environement variables.
   ```
 
-4. Start the dash service
+3. Start the dash service
   ```
     /etc/init.d/dash_service start
   ```
