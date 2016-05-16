@@ -1,5 +1,12 @@
 # AmazonDash_IFTTT
 
+# Overview
+
+This repo contains the code and notes that I used to make my amazon dash work with IFTTT service.
+In contrast to other projects, that I could find, this is a router based solution and does not depend on a specific computer to be running on the network.
+
+# TODO/Notes
+
 TODO: This can be improved by executing specific code based on the IP addresss of the connecting device.
 
 Notes: Is there a better way to achieve this on a router?
